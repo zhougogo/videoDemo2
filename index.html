@@ -5,14 +5,14 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
 		<link rel="stylesheet" href="css/index.css" />
-		<link rel="stylesheet" type="text/css" href="css/video-js.css"/>
+
 		<title></title>
 	</head>
 
 	<body>
 		<div class="page">
 			<div class="content content1">
-				<video loop="loop" x-webkit-airplay="true" playsinline webkit-playsinline="true" id="my-video" class="video-js" controls preload="auto" width="640" height="505" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+				<video webkit-playsinline playsinline x5-video-player-type="h5" preload='true' loop autoplay x-webkit-airplay="true" x5-video-player-fullscreen="true" id="video" controls>
 					<source src="2.mp4">
 				</video>
 
@@ -32,15 +32,10 @@
 
 	</body>
 	<script src="js/jquery.min.js"></script>
-	<script src="js/video.min.js" type="text/javascript" charset="utf-8"></script>
+
 	<script src="js/index.js"></script>
 	<script type="text/javascript">
-			var myPlayer = videojs('my-video');
-				videojs("my-video").ready(function() {
-					var myPlayer = this;
-					myPlayer.play();
-				});
-				
+
 				
 				var video = $('video');
 
