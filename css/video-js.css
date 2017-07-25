@@ -1,9 +1,10 @@
 .video-js .vjs-big-play-button:before, .video-js .vjs-control:before, .video-js .vjs-modal-dialog, .vjs-modal-dialog .vjs-modal-dialog-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*width: 100%;*/
+  /*height: 100%;*/ 
+  }
 
 .video-js .vjs-big-play-button:before, .video-js .vjs-control:before {
   text-align: center; }
@@ -282,10 +283,12 @@
   height: 0; }
 
 .video-js.vjs-16-9 {
-  padding-top: 56.25%; }
+  /*padding-top: 56.25%;*/ 
+  }
 
 .video-js.vjs-4-3 {
-  padding-top: 75%; }
+  /*padding-top: 75%;*/ 
+  }
 
 .video-js.vjs-fill {
   width: 100%;
@@ -295,8 +298,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%; }
+  width: 640px;
+  height: 505px;
+   }
 
 body.vjs-full-window {
   padding: 0;
@@ -560,9 +564,9 @@ body.vjs-full-window {
 
 .video-js .vjs-control-bar {
   display: none;
-  width: 100%;
+  width: 640px;
   position: absolute;
-  bottom: 0;
+  top: 470px;
   left: 0;
   right: 0;
   height: 3.0em;

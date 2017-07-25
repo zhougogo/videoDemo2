@@ -1,55 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 	<head>
-		<meta charset="utf-8">
-		<title>Video.js 5.18.4</title>
-		<link href="css/video-js.css" rel="stylesheet">
+		<meta charset="utf-8" />
 		<meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
-		<!-- If you'd like to support IE8 -->
-		<script src="js/videojs-ie8.min.js"></script>
-		<style>
-			body {
-				background-color: #191919
-			}
-			*{
-				margin: 0;
-				padding: 0;
-			}
-			.m {
-				width: 640px;
-				height: 264;
-				margin-left: auto;
-				margin-right: auto;
-				margin-top: 100px;
-			}
-			video{
-				width: 640px;
-			}
-		</style>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/video-js.css"/>
+		<title></title>
 	</head>
 
 	<body>
-		<div class="m">
-			<video x-webkit-airplay="true" playsinline webkit-playsinline="true" id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-				<source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-				<source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
-				<source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
-				<p class="vjs-no-js">
-					To view this video please enable JavaScript, and consider upgrading to a web browser that
-					<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-				</p>
-			</video>
-			<script src="http://vjs.zencdn.net/5.18.4/video.min.js"></script>
-			<script type="text/javascript">
-				var myPlayer = videojs('my-video');
+		<div class="page">
+			<div class="content content1">
+				<video x-webkit-airplay="true" playsinline webkit-playsinline="true" id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+					<source src="https://api.shanghaichujie.com/upload/videos/tqlMzhcN5usKJRcO7v5OaSpvG344mddg5MYS5YtF.mp4" type="video/mp4">
+				</video>
+
+				<img src="img/shareBtn.png" alt="" class="shareBtn hidden">
+				<img src="img/careBtn.png" alt="" class="careBtn hidden">
+			</div>
+			<div class="content hidden content2">
+				<img src="img/code.png" alt="" class="code">
+				<img src="img/knowBtn.png" alt="" class="kownBtn">
+			</div>
+			<div class="content hidden content3">
+				<img src="img/shareText.png" alt="" class="shareText">
+				<img src="img/plane.png" alt="" class="plane">
+				<img src="img/knowBtn.png" alt="" class="kownBtn">
+			</div>
+		</div>
+
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/video.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript">
+			var myPlayer = videojs('my-video');
 				videojs("my-video").ready(function() {
 					var myPlayer = this;
 					myPlayer.play();
 				});
-			</script>
-		</div>
-
-	</body>
+			var player = document.getElementById('my-video');
+			console.log(player);
+			document.addEventListener("WeixinJSBridgeReady", function() {
+	            setTimeout(function(){
+	                player.play();//调用h5播放器自动播放的方法，我们使用的是video.js播放器。
+	            },500);
+	        }, false);
+	</script>
 
 </html>
