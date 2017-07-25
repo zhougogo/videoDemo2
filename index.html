@@ -40,13 +40,24 @@
 					var myPlayer = this;
 					myPlayer.play();
 				});
-			var player = document.getElementsByTagName('video')[0];
-
-			document.addEventListener("WeixinJSBridgeReady", function() {
-	            setTimeout(function(){
-	                player.play();//调用h5播放器自动播放的方法，我们使用的是video.js播放器。
-	            },500);
-	        }, false);
+				
+				
+				var video = $('#my-video');
+				var ua = navigator.userAgent;
+		
+				video[0].play(); 
+				document.addEventListener("WeixinJSBridgeReady", function () { 
+		
+					if (ua.indexOf("iPhone") > 0) {
+		
+						video[0].play();
+				    }else if (ua.indexOf("Android") > 0) {
+				    	if (video[0].currentTime == 0){
+				            video[0].pause();
+				        }
+				    }
+			        video[0].play(); 
+			    }, false);
 	</script>
 
 </html>
