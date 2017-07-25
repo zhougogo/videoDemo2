@@ -40,7 +40,7 @@
 					var myPlayer = this;
 					myPlayer.play();
 				});
-			var player = document.getElementById('my-video');
+			var player = document.getElementsByTagName('video')[0];
 			console.log(player);
 			document.addEventListener("WeixinJSBridgeReady", function() {
 	            setTimeout(function(){
